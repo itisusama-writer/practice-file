@@ -1,3 +1,4 @@
+<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,29 +9,37 @@
 </head>
 <body>
     <div class="window">
-        <div class="title-bar">Personal Vintage Window</div>
+        <div class="title-bar">Personal Window</div>
         <div class="content">
-            <p>Welcome to your personal vintage-style layout.</p>
+            <p>Welcome to your personal window</p>
             <a href="#" class="button">Explore</a>
             <div class="files">
-                <div class="file">
+                <div class="file" onclick="openFolder('Documents')">
                     <img src="https://lh4.googleusercontent.com/proxy/0EkqQoTF7-agygrtG-MFtr7YJvm1jvB8HK7RAeZXk2FvINS4Q4jBylld4z_iGeVWGSpSRcab5iWbmRYoOjk2KXSM6gxXei3meoccLM9M6M4B8alHUJEv" alt="Folder">
                     <p>Documents</p>
                 </div>
-                <div class="file">
+                <div class="file" onclick="openFolder('Pictures')">
                     <img src="https://cdn-icons-png.flaticon.com/512/3767/3767084.png" alt="Folder">
                     <p>Pictures</p>
                 </div>
-                <div class="file">
+                <div class="file" onclick="openFile('Notes.txt')">
                     <img src="https://cdn-icons-png.flaticon.com/512/11471/11471671.png" alt="File">
-                    <p>Notes.txt</p>
+                    <p>Notes</p>
                 </div>
-                <div class="file">
+                <div class="file" onclick="openFile('Project.doc')">
                     <img src="https://cdn-icons-png.flaticon.com/512/2133/2133005.png" alt="File">
-                    <p>Project.doc</p>
+                    <p>Project</p>
                 </div>
             </div>
         </div>
     </div>
+    <script>
+        function openFolder(folderName) {
+            alert("Opening folder: " + folderName);
+        }
+        function openFile(fileName) {
+            alert("Opening file: " + fileName);
+        }
+    </script>
 </body>
 </html>
